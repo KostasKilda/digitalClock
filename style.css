@@ -34,8 +34,8 @@ body{
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 100px;
-    background: linear-gradient(to right,#ff521d ,#ffd021,#00ff55, #00ffeb);
-    animation: outterBorder 5s ease infinite;
+    background: linear-gradient(to right ,#ffd021,#00ff55, #00ffeb);
+    animation: outterBorder 15s ease infinite;
     background-size: 400%, 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
