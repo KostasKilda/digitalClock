@@ -18,7 +18,7 @@ body{
     background-size: 400%, 400%;
 }
 
-.innerBorder{
+.innerBorderMobile1, .innerBorderMobile2, .innerBorderMobile3, .innerBorderPc{
     position: absolute;
     width: 570px;
     height: 170px;
@@ -29,7 +29,7 @@ body{
     background-color: black;
 }
 
-#clock{
+#clockPc, #clockMobileHour, #clockMobileMin, #clockMobileSec{
     padding-top: 20px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -39,6 +39,60 @@ body{
     background-size: 400%, 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.mobile{
+    display: none;
+}
+
+.pc{
+    display: block;
+}
+
+@media only screen and (max-width: 610px){
+
+    .pc{
+        display:none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .outterBorder{
+        width: 160px;
+        height: 310px;
+        border-radius: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(137.5%, -20%);
+    }
+
+    .innerBorderMobile1, .innerBorderMobile2, .innerBorderMobile3{
+        width: 120px;
+        height: 80px;
+        margin: 0;
+        padding: 0;
+        border-radius: 15px;
+    }
+
+    .innerBorderMobile1{
+        transform: translate(-50%, -170%);
+    }
+
+    .innerBorderMobile2{
+        transform: translate(-50%, -50%);
+    }
+
+    .innerBorderMobile3{
+        transform: translate(-50%, 70%);
+    }
+
+    #clockMobileHour, #clockMobileMin, #clockMobileSec{
+        padding: 0px;
+        font-size: 70px;
+    }
 }
 
 @keyframes outterBorder {
@@ -64,4 +118,3 @@ body{
 		background-position: 0% 50%;
 	}
 }
-
