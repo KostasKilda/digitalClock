@@ -30,6 +30,14 @@
 
         <script>
 
+            // Pads time with leading 0's
+            function padding(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            return i;
+            }
+
             setInterval(function(){
                 let date = new Date();
                 document.querySelector('#clockPc').innerHTML = date.toLocaleTimeString();
@@ -37,19 +45,19 @@
 
             setInterval(function(){
                 const hours = new Date();
-                let hour = hours.getHours();
+                let hour = padding(hours.getHours());
                 document.getElementById("clockMobileHour").innerHTML = hour;
             }, 100)
 
             setInterval(function(){
                 const minutes = new Date();
-                let minute = minutes.getMinutes();
+                let minute = padding(minutes.getMinutes());
                 document.getElementById("clockMobileMin").innerHTML = minute;
             }, 100)
 
             setInterval(function(){
                 const seconds = new Date();
-                let second = seconds.getSeconds();
+                let second = padding(seconds.getSeconds());
                 document.getElementById("clockMobileSec").innerHTML = second;
             }, 100)
             
