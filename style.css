@@ -50,11 +50,11 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 60vw 0 0 0;
+        margin: 40vh 0 60vh 0;
         position:unset;
         width: 95%;
         height: 100%;
-        border-radius: 5px;
+        border-radius: 7.5px;
     }
 
     .innerBorder{
