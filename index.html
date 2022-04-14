@@ -6,61 +6,20 @@
     </head>
 
     <body>
-        <div class="pc">
+        <div class="display">
             <div class="outterBorder">
-                <div class="innerBorderPc">
-                    <div id="clockPc"></div>
+                <div class="innerBorder">
+                    <div id="clock"></div>
                 </div>
             </div>
         </div>
-
-        <div class="mobile">
-            <div class="outterBorder">
-                <div class="innerBorderMobile1">
-                    <div id="clockMobileHour"></div>
-                </div>
-                <div class="innerBorderMobile2">
-                    <div id="clockMobileMin"></div>
-                </div>
-                <div class="innerBorderMobile3">
-                    <div id="clockMobileSec"></div>
-                </div>
-            </div>
-        </div>
-
+        
         <script>
-
-            // Pads time with leading 0's
-            function padding(i) {
-            if (i < 10) {
-                i = "0" + i
-            }
-            return i;
-            }
 
             setInterval(function(){
                 let date = new Date();
-                document.querySelector('#clockPc').innerHTML = date.toLocaleTimeString();
-            }, 100)
-
-            setInterval(function(){
-                const hours = new Date();
-                let hour = padding(hours.getHours());
-                document.getElementById("clockMobileHour").innerHTML = hour;
-            }, 100)
-
-            setInterval(function(){
-                const minutes = new Date();
-                let minute = padding(minutes.getMinutes());
-                document.getElementById("clockMobileMin").innerHTML = minute;
-            }, 100)
-
-            setInterval(function(){
-                const seconds = new Date();
-                let second = padding(seconds.getSeconds());
-                document.getElementById("clockMobileSec").innerHTML = second;
-            }, 100)
-            
+                document.querySelector('#clock').innerHTML = date.toLocaleTimeString();
+            }, 100)        
         </script>
 
     </body>

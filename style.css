@@ -18,7 +18,7 @@ body{
     background-size: 400%, 400%;
 }
 
-.innerBorderMobile1, .innerBorderMobile2, .innerBorderMobile3, .innerBorderPc{
+.innerBorder{
     position: absolute;
     width: 570px;
     height: 170px;
@@ -29,7 +29,7 @@ body{
     background-color: black;
 }
 
-#clockPc, #clockMobileHour, #clockMobileMin, #clockMobileSec{
+#clock{
     padding-top: 20px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -41,58 +41,38 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.mobile{
-    display: none;
-}
-
-.pc{
-    display: block;
-}
-
 @media only screen and (max-width: 610px){
 
-    .pc{
-        display:none;
-    }
-
-    .mobile{
-        display: block;
+    .display{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
 
     .outterBorder{
-        width: 160px;
-        height: 310px;
-        border-radius: 8px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(137.5%, -20%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40% 0 0 0;
+        position:unset;
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
     }
 
-    .innerBorderMobile1, .innerBorderMobile2, .innerBorderMobile3{
-        width: 120px;
-        height: 80px;
-        margin: 0;
-        padding: 0;
-        border-radius: 15px;
+    .innerBorder{
+        position:unset;
+        width: 92.5%;
+        height: 85%;
+        margin: 3% 0 3% 0;
     }
 
-    .innerBorderMobile1{
-        transform: translate(-50%, -170%);
+    #clock{
+        padding: 5% 0 5% 0;
+        font-size: 20vw;
     }
 
-    .innerBorderMobile2{
-        transform: translate(-50%, -50%);
-    }
-
-    .innerBorderMobile3{
-        transform: translate(-50%, 70%);
-    }
-
-    #clockMobileHour, #clockMobileMin, #clockMobileSec{
-        padding: 0px;
-        font-size: 70px;
-    }
 }
 
 @keyframes outterBorder {
