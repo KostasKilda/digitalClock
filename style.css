@@ -50,7 +50,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 35% 0 0 0;
+        margin: 60vw 0 0 0;
         position:unset;
         width: 95%;
         height: 100%;
@@ -69,12 +69,6 @@ body{
         font-size: 20vw;
     }
 
-}
-
-@media only screen and (max-width: 260px){
-    .outterBorder{
-        margin: 100% 0 0 0;
-    }
 }
 
 @keyframes outterBorder {
